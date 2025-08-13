@@ -13,6 +13,9 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 3. The header has a border at the bottom, but it has the wrong color. Change it do the correct one.
+  if (headerEl) {
+    headerEl.style.borderBottomColor = "lightgray";
+  }
   // ------------------------------------------------------------------------------------
   // 4. The recipe name is wrong, change it to the correct one.
   // ------------------------------------------------------------------------------------
