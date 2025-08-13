@@ -59,10 +59,26 @@ export function part1() {
 
   // ------------------------------------------------------------------------------------
   // 7. Which is the forth element in the list containing the ingredients for the paste?
-  
+  if (ingredientsEl) {
+    console.log(`7. Answer: ${ingredientsEl[3].innerHTML}`);
+  }
+  // Answer: 3dl vispgrädde
 
   // ------------------------------------------------------------------------------------
   // 8. Create an an array of objects from the instructions. Each element in the array should be an object that looks like this:
+  const instructionsEl = document.querySelectorAll<HTMLOListElement>(
+    ".instructions-list li"
+  );
+  const instructionsArray: { order: number; text: string }[] = [];
+
+  instructionsEl.forEach((el, index) => {
+    instructionsArray.push({
+      order: index + 1,
+      text: el.innerHTML,
+    });
+  });
+  console.log("8. Answer: ");
+  console.log(instructionsArray);
 
   // ------------------------------------------------------------------------------------
 }
