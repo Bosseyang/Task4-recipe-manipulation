@@ -24,6 +24,12 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 5. The clock icon beneath the recipe name has disappeared and been replaced by a text instead. This can be fixed by adding a class to that element.
+  const timerIconEl = document.querySelector<HTMLSpanElement>(
+    ".time-container span"
+  );
+  if (timerIconEl) {
+    timerIconEl.classList.add("material-symbols-outlined");
+  }
   // ------------------------------------------------------------------------------------
   // 6. The estimated time of the recipe is also incorrect. Change it to the correct time estimation.
   // ------------------------------------------------------------------------------------
