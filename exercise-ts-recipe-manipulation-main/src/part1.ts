@@ -35,8 +35,13 @@ export function part1() {
 
   // ------------------------------------------------------------------------------------
   // 5. What is the dimensions and the url of the image? Create an object that looks like this, and log it to the console:
+  interface IImgInfo {
+    url: string;
+    height: number;
+    width: number;
+  }
   if (imgEl) {
-    const imgInfo = {
+    const imgInfo: IImgInfo = {
       url: imgEl.src,
       height: imgEl.height,
       width: imgEl.width,
