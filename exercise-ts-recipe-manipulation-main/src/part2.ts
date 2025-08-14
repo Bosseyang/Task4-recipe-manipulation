@@ -38,6 +38,12 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 7. The src path to the image is wrong, or atleast it's showing the wrong image. Change it to the correct one. The available images can be found in the assets folder.
+  const imgEl = document.querySelector<HTMLImageElement>(
+    'img[src="/src/assets/apple-pie.jpg"]'
+  );
+  if (imgEl) {
+    imgEl.src = "/src/assets/frozen-cheesecake-slice.jpg";
+  }
   // ------------------------------------------------------------------------------------
   // 8. The background color of the ingredients list container is wrong. Fix it.
   // ------------------------------------------------------------------------------------
