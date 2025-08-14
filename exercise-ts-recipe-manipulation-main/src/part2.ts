@@ -73,6 +73,12 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 10. The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
+  const ingredientsPasteLiEl = document.querySelectorAll<HTMLLIElement>(
+    ".ingredients-list-paste li"
+  );
+  if (ingredientsPasteLiEl) {
+    ingredientsPasteLiEl[2].innerHTML = "3tsk vaniljsocker";
+  }
   // ------------------------------------------------------------------------------------
   // 11. There is also a missing ingredient in the list of ingredients to the paste. Look and see what it is and add that one the the end of the list.
   // ------------------------------------------------------------------------------------
