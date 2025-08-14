@@ -93,6 +93,12 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 12. The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. Remove that styling.
+  const instructionsEl = document.querySelector<HTMLHeadingElement>(
+    ".instructions.shadow"
+  );
+  if (instructionsEl) {
+    instructionsEl.classList.remove("shadow");
+  }
   // ------------------------------------------------------------------------------------
   // 13. Two list elements of the list of instructions are incorrect. Find them and change them to the correct ones.
   // ------------------------------------------------------------------------------------
