@@ -81,6 +81,16 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 11. There is also a missing ingredient in the list of ingredients to the paste. Look and see what it is and add that one the the end of the list.
+  const ingredientsPasteUlEl = document.querySelector<HTMLUListElement>(
+    ".ingredients-list-paste"
+  );
+  if (ingredientsPasteUlEl) {
+    const li = document.createElement("li");
+    li.innerHTML = "400g naturell philadelphiaost";
+    if (ingredientsPasteLiEl.length < 5) {
+      ingredientsPasteUlEl.appendChild(li);
+    }
+  }
   // ------------------------------------------------------------------------------------
   // 12. The text "Instructions" to the left, beneath the image, has some shadow styling applied to it. Remove that styling.
   // ------------------------------------------------------------------------------------
