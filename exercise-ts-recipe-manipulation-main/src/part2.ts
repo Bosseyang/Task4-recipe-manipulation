@@ -101,5 +101,13 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 13. Two list elements of the list of instructions are incorrect. Find them and change them to the correct ones.
+  const instructionsLiEl = document.querySelectorAll<HTMLLIElement>(
+    ".instructions-list li"
+  );
+  if (instructionsLiEl) {
+    instructionsLiEl[1].innerHTML =
+      "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+    instructionsLiEl[8].innerHTML = "Ställ in i frysen över natten.";
+  }
   // ------------------------------------------------------------------------------------
 }
