@@ -46,6 +46,12 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 8. The background color of the ingredients list container is wrong. Fix it.
+  const ingredientsEl = document.querySelector<HTMLElement>(
+    ".ingredients-container"
+  );
+  if (ingredientsEl) {
+    ingredientsEl.style.backgroundColor = "#f9f9f9";
+  }
   // ------------------------------------------------------------------------------------
   // 9. The ingredients are divided in to two parts, one for the bottom and one for the paste. In the list of the ingredients to the bottom, there is a text instead of two list items. Remove the text and add those two list items.
   // ------------------------------------------------------------------------------------
