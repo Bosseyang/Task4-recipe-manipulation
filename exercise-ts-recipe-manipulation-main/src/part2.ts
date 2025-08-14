@@ -54,6 +54,23 @@ export function part2() {
   }
   // ------------------------------------------------------------------------------------
   // 9. The ingredients are divided in to two parts, one for the bottom and one for the paste. In the list of the ingredients to the bottom, there is a text instead of two list items. Remove the text and add those two list items.
+  const ingredientsBottomEl = document.querySelector<HTMLParagraphElement>(
+    ".ingredients-list-bottom p"
+  );
+  const ingredientsListBottomEl = document.querySelector<HTMLUListElement>(
+    ".ingredients-list-bottom"
+  );
+  const bottomIngredients = ["15st digestivekex", "Lite smör"];
+  if (ingredientsBottomEl) {
+    ingredientsBottomEl.remove();
+    bottomIngredients.forEach((ingredient) => {
+      const li = document.createElement("li");
+      li.innerHTML = ingredient;
+      if (ingredientsListBottomEl) {
+        ingredientsListBottomEl.appendChild(li);
+      }
+    });
+  }
   // ------------------------------------------------------------------------------------
   // 10. The third ingredient in the list of ingredients to the paste is wrong. Change that specific ingredient to the correct one.
   // ------------------------------------------------------------------------------------
